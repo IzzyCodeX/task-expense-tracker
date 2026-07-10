@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="todo-form">
+            <input type="text" name="taskInput" placeholder="Add a task...">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <div class="todo-stats">
+            <span>Total: <span id="total-tasks">0</span></span>
+            <span>Completed: <span id="completed-tasks">0</span></span>
+            <span>Remaining: <span id="remaining-tasks">0</span></span>
+        </div>
+
+        <ol class="todo-list"></ol>
+    </div>
+    
+    <script src="task.js"></script>
+</body>
+</html>
