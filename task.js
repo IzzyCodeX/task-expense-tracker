@@ -10,7 +10,14 @@ todoForm.addEventListener("submit", function(e){
 
     if (inputValue !== ""){
         const task = {
-            
-        }
+            id: new Date().getTime(),
+            name: inputValue,
+            isCompleted: false
+        };
+
+        tasks.push(task);
+        console.log(tasks);
+
+        todoForm.reset();
     }
-})
+});
