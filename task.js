@@ -16,8 +16,22 @@ todoForm.addEventListener("submit", function(e){
         };
 
         tasks.push(task);
+        createTask(task);
         console.log(tasks);
 
         todoForm.reset();
     }
 });
+
+function createTask(task){
+    const taskEl = document.createElement("li");
+    taskEl.setAttribute("id", task.id);
+
+    taskEl.innerHTML= `
+    <input type="checkbox" ${task.isCompleted ? "checked" : ""}>
+    <span>${task.name}</span>
+    <button class="remove-task">Delete</button>
+    `;
+
+    todoList.appendChild(taskEl);
+}
